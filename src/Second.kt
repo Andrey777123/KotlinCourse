@@ -21,4 +21,19 @@ fun main(){
         4 -> println("Удовлетворительно")
         5 -> println("Отлично")
     }
+
+    println("Сумма вклада:")
+    val sum:String = readLine()?:"0"
+    println("Длительность(кол-во месяцев):")
+    val numOfMonths:String = readLine()?:"0"
+    println("Процент:")
+    val percent:String = readLine()?:"0"
+
+    var newSum: Double = sum.toDouble()
+    var growth: Double = 0.0
+    for(month in 1..numOfMonths.toInt()){
+        growth = newSum * percent.toDouble() / 100
+        newSum = newSum.toDouble() + growth
+        println("Итог по $month месяцу:\nПрибыль = $growth\nСумма вклада = $newSum")
+    }
 }
