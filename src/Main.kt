@@ -21,4 +21,11 @@ fun main(args: Array<String>) {
     print("Hello, ${userName.toString()}")
 
     var reverseAlphabet = 'z' downTo 'a'
+
+    println("a:")
+    var a = readLine().toString()
+    println("b:")
+    var b = readLine().toString()
+    var aMoreb = a > b
+    println(aMoreb)
 }
