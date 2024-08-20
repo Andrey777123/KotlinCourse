@@ -19,4 +19,6 @@ fun main(args: Array<String>) {
     println("What is your name?")
     var userName: String? = readLine()
     print("Hello, ${userName.toString()}")
+
+    var reverseAlphabet = 'z' downTo 'a'
 }
