@@ -36,4 +36,20 @@ fun main(){
         newSum = newSum.toDouble() + growth
         println("Итог по $month месяцу:\nПрибыль = $growth\nСумма вклада = $newSum")
     }
+
+    val table: Array<Array<Array<String>>> = Array(3, {Array(2, {Array(3, {""})})})
+    table[0][0] = arrayOf("Россия","Москва","Рубль")
+    table[0][1] = arrayOf("Франция","Париж","Франк")
+    table[1][0] = arrayOf("Япония","Токио","Иена")
+    table[1][1] = arrayOf("Индия","Нью-Дели","Рупия")
+    table[2][0] = arrayOf("Турция","Анкара","Лира")
+    table[2][1] = arrayOf("Германия","Берлин","Евро")
+    for (i in 0..2) {
+        for (j in 0..1) {
+            for (k in 0..2) {
+                print((table[i][j][k]) + "\t")
+            }
+            println()
+        }
+    }
 }
