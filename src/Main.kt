@@ -15,4 +15,8 @@ fun main(args: Array<String>) {
     println(five.code.toDouble())
     println(five.code.toFloat())
     println(five.code.toLong())
+
+    println("What is your name?")
+    var userName: String? = readLine()
+    print("Hello, ${userName.toString()}")
 }
