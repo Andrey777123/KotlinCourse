@@ -52,4 +52,29 @@ fun main(){
             println()
         }
     }
+
+    var cities : ArrayList<String> = arrayListOf()
+    while(true){
+        println("Что вы хотите сделать?\n1 - Добавить название города\n2 - Посмотреть список всех добавленных городов\n3 - Посмотреть список добавленных городов без повторений\n4 - Выход")
+        val ans:String = readLine()?:"0"
+        if (ans == "1") {
+            println("Введите название города:")
+            val newCity:String = readLine()?:"0"
+            cities.add(newCity)
+            println("Добавлен город $newCity")
+        }
+        else if (ans == "2"){
+            println(cities.joinToString(", "))
+        }
+        else if (ans == "3"){
+            var unique_cities = cities.toSet()
+            println(unique_cities.joinToString(", "))
+        }
+        else if (ans == "4"){
+            System.exit(0)
+        }
+        else {
+            println("Неверное значение")
+        }
+    }
 }
